@@ -1,0 +1,63 @@
+\usepackage{xltxtra}
+\usepackage{xgreek}
+\usepackage{fontspec}
+\usepackage{color}
+\usepackage[toc,page]{appendix}
+\usepackage{hyperref}
+\usepackage[toc]{glossaries}
+\usepackage{glossary-mcols}
+\makeglossaries
+\setromanfont{FreeSerif}
+% \setsansfont{FreeSans}
+% \setmonofont{FreeMono}
+% \setmainfont[Mapping=tex-text]{GFS Didot}
+
+% \setromanfont[Mapping=tex-text]{Linux Libertine O}
+% \setsansfont[Mapping=tex-text]{DejaVu Sans}
+% \setmonofont[Mapping=tex-text]{DejaVu Sans Mono}
+
+
+\newcommand{\addVerb}[8]{- #1 \\\begin{tabular}{l l l}  ich & #2 & #3 \\
+  du & #2 & #4 \\
+  er, sie, es & #2 & #5 \\
+  wir & #2 & #6 \\
+  ihr & #2 & #7 \\
+  Sie & #2 & #8 \\
+ \end{tabular} 
+ }
+ 
+ \newcommand{\addNormalVerb}[2]{ \addVerb{#1}{#2}{-e}{-st}{-t}{-en}{-t}{-en} }
+
+  \newcommand{\addBVerb}[2]{- #1 \\\begin{tabular}{l l l}  ich & #2 & -e \\
+    du & #2 & -\textcolor{red}{e}st \\
+    er, sie, es & #2 & -\textcolor{red}{e}t \\
+    wir & #2 & -en \\
+    ihr & #2 & -\textcolor{red}{e}t \\
+    Sie & #2 & -en \\
+  \end{tabular} 
+  }
+  
+  \newcommand{\addCVerb}[2]{ \addVerb{#1}{#2}{-e}{-t}{-t}{-en}{-t}{-en} }
+  
+  \newcommand{\addDVerb}[3]{- #1 \\\begin{tabular}{l l l}  ich & #2 & -e \\
+    du & #3 & -st \\
+    er, sie, es & #3 & -t \\
+    wir & #2 & -en \\
+    ihr & #2 & -t \\
+    Sie & #2 & -en \\
+  \end{tabular} 
+  }
+ 
+  
+  \newcommand{\addGVerb}[2]{- #1 \\\begin{tabular}{l l l}  ich & #2 & -e \\
+    du & #2 & -st \\
+    er, sie, es & #2 & -t \\
+    wir & #2 & -n \\
+    ihr & #2 & -t \\
+    Sie & #2 & -n \\
+  \end{tabular} 
+  }
+ 
+\title{}
+\author{}
+\date{}

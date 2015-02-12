@@ -1,149 +1,21 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[hidelinks,a4paper,10pt]{article}
 %\documentclass[a4paper,10pt]{scrartcl}
 
-\usepackage{xltxtra}
-\usepackage{xgreek}
-\usepackage{fontspec}
-\usepackage{color}
-\usepackage[toc,page]{appendix}
-\usepackage[toc]{glossaries}
-\makeglossaries
-\setromanfont{FreeSerif}
-% \setsansfont{FreeSans}
-% \setmonofont{FreeMono}
-% \setmainfont[Mapping=tex-text]{GFS Didot}
-
-% \setromanfont[Mapping=tex-text]{Linux Libertine O}
-% \setsansfont[Mapping=tex-text]{DejaVu Sans}
-% \setmonofont[Mapping=tex-text]{DejaVu Sans Mono}
-
-
-\newcommand{\addVerb}[8]{- #1 \\\begin{tabular}{l l l}  ich & #2 & #3 \\
-  du & #2 & #4 \\
-  er, sie, es & #2 & #5 \\
-  wir & #2 & #6 \\
-  ihr & #2 & #7 \\
-  Sie & #2 & #8 \\
- \end{tabular} 
- }
- 
- \newcommand{\addNormalVerb}[2]{ \addVerb{#1}{#2}{-e}{-st}{-t}{-en}{-t}{-en} }
-
-  \newcommand{\addBVerb}[2]{- #1 \\\begin{tabular}{l l l}  ich & #2 & -e \\
-    du & #2 & -\textcolor{red}{e}st \\
-    er, sie, es & #2 & -\textcolor{red}{e}t \\
-    wir & #2 & -en \\
-    ihr & #2 & -\textcolor{red}{e}t \\
-    Sie & #2 & -en \\
-  \end{tabular} 
-  }
-  
-  \newcommand{\addCVerb}[2]{ \addVerb{#1}{#2}{-e}{-t}{-t}{-en}{-t}{-en} }
-  
-  \newcommand{\addDVerb}[3]{- #1 \\\begin{tabular}{l l l}  ich & #2 & -e \\
-    du & #3 & -st \\
-    er, sie, es & #3 & -t \\
-    wir & #2 & -en \\
-    ihr & #2 & -t \\
-    Sie & #2 & -en \\
-  \end{tabular} 
-  }
- 
-  
-  \newcommand{\addGVerb}[2]{- #1 \\\begin{tabular}{l l l}  ich & #2 & -e \\
-    du & #2 & -st \\
-    er, sie, es & #2 & -t \\
-    wir & #2 & -n \\
-    ihr & #2 & -t \\
-    Sie & #2 & -n \\
-  \end{tabular} 
-  }
- 
-\title{}
-\author{}
-\date{}
+\usepackage{preamble}
 
 \begin{document}
 \maketitle
 
-\begin{appendix}
- 
- \section{Verben - Ρήματα}
- 
- Στο παρόν παράρτημα παραθέτουμε τις συζηγίες Ρημάτων και ποια ρήματα ανήκουν σε αυτές.
- 
- \subsection{Regelmaessige Verben - Ομαλά Ρήματα}
- 
- \addNormalVerb{Wohnen}{wohn} \\ 
- \addNormalVerb{Kommen}{komm}
- 
- \subsection{Unregelmaessige Verben - Ανώμαλα Ρήματα}
- 
- \subsubsection{B Verben}
- Ρήματα τα οποία χρειάζονται ένα -e- ανάμεσα στο θέμα (-t, -d, -m, -n, διπλό σύμφωνο) και την κατάληξη για λόγους ευφωνίας. \\ \newline
- \addBVerb{Arbeiten}{arbeit} \\ \newline
- Rechnen, Atmen
- 
- \subsubsection{C Verben}
- Ρήματα των οποίων το θέμα λήγει σε -ss, -s, -z, -tz, -x. \\
- \addCVerb{Heissen}{heiss} \\ \newline
- Essen, Reisen, Tanzen, Sitzen, Boxen
- \subsubsection{D Verben}
- Ρήματα των οποίων το θέμα αλλάζει στο $2^o$ και $3^ο$ πρόσωπο από $e \rightarrow ie$. \\
- \addDVerb{Sehen}{seh}{sieh}
- 
- \subsubsection{E Verben}
- Ρήματα των οποίων το θέμα αλλάζει στο $2^o$ και $3^ο$ πρόσωπο από $e \rightarrow i$. \\
- \addDVerb{Sprechen}{sprech}{spr\textcolor{red}{i}ch} \\
- \addDVerb{Nehmen}{nehm}{n\textcolor{red}{i}mm} \\
- 
- \subsubsection{F Verben}
- Ρήματα των οποίων το θέμα αλλάζει στο $2^o$ και $3^ο$ πρόσωπο από a $\rightarrow$ ae. \\
- \addDVerb{Fahren}{fahr}{faehr}
- 
- \subsubsection{G Verben}
- Ρήματα τα οποία τελειώνουν σε -n (-eln) \\
- \addGVerb{Basteln}{bastel}
- 
- 
- 
- \newcommand{\nge}[2]{\newglossaryentry{#1}{ name={#1}, description={#2} }}
- \nge{Sein}{Είμαι}
- \nge{Haben}{Έχω}
- \nge{Werden}{Γίνομαι}
- \nge{Wissen}{Γνωρίζω}
- \nge{Moegen}{Επιθυμώ, μου αρέσει, θέλω}
- 
- 
- 
- \section{ ... Verben}
- \begin{tabular}{l l l l l l}
-  & \gls{Sein} & \gls{Haben} & \gls{Werden} & \gls{Wissen} & \gls{Moegen} \\
-  ich & bin & habe & werde & weiss & mag \\
-  du & bist & hast & wirst & weisst & magst \\
-  er, sie, es & ist & hat & wird & weiss & mag \\
-  wir & sind & haben & werden & wissen & moegen \\
-  ihr & seid & habt & werdet & wisst & moegt \\
-  Sie & sind & haben & werden & wissen & moegen \\
- \end{tabular}
 
- 
- \section{Modalverben}
- 
- \begin{tabular}{l l l l l l l}
-  & Moechten & Muessen & Koennen & Duerfen & Wollen & Sollen \\
-  ich & moechte & muss & kann & darf & will & soll \\
-  du & moechtest & musst & kannst & darfst & willst & sollst \\
-  er, sie, es & moechte & muss & kann & darf & will & soll \\
-  wir & moechten & muessen & koennen & duerfen & wollen & sollen \\
-  ihr & moechtet & muesst & koennt & duerft & wollt & sollt \\
-  Sie & moechten & muessen & koennen & duerfen & wollen & sollen \\
- \end{tabular}
+\include{my_gloss}
 
- 
- 
-\end{appendix}
+ Απορίες :: \\
+ \begin{itemize}
+  \item Διαφορά μεταξύ \gls{Moegen}, \gls{Wollen}, \gls{Moechten}
+ \end{itemize}
 
-\printglossaries
+\include{my_appendices}
+
+\printglossary[style=mcolindex]
 
 \end{document}
