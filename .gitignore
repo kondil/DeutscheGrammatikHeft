@@ -1,7 +1,10 @@
 *.aux
 *.glg
 *.gls
+*.glo
 *.ist
+*.log
+*.out
 *~
 *.backup
 *.pdf
